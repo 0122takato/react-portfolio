@@ -1,10 +1,10 @@
 import Circle from 'react-circle';
-import { useEffect, useReducer } from 'react';
-import axios from 'axios';
-import { skillReducer, initialState, actionTypes } from '../reducers/skillReducer';
 import { requestStates } from '../constants';
+import { useSkills } from '../customHooks/useSkills';
 
 export const Skills = () => {
+
+    const [sortedLanguageList, fetchRequestState, converseCountToPercentage] = useSkills()
 
     const [state, dispatch] = useReducer(skillReducer, initialState);
 
@@ -50,12 +50,12 @@ export const Skills = () => {
                 </div>
                 <div className="skills-container">
                     {
-                        state.requestState === requestStates.loading && (
+                        fetchRequestState === requestStates.loading && (
                             <p className="description">取得中...</p>
                         )
                     }
                     {
-                        state.requestState === requestStates.success && (
+                        fetchRequestState === requestStates.success && (
                             sortedLanguageList().map((item, index) => (
                                 <div className="skill-item" key={index}>
                                     <p><strong>{item.language}</strong></p>
@@ -68,7 +68,7 @@ export const Skills = () => {
                         )
                     }
                     {
-                        state.requestState === requestStates.error && (
+                        fetchRequestState === requestStates.error && (
                             <p className="description">エラーが発生しました</p>
                         )
                     }
