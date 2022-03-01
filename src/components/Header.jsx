@@ -14,7 +14,7 @@ export const Header = () => {
                         <div className="profile-thumb" style={{ backgroundImage: `url(${ProfileImage})` }}></div>
                         {/* 名前と肩書はみなさんのお名前や肩書を自由に入れてください */}
                         <h1 className="title-text">新谷威人</h1>
-                        <h3 className="title-text">あなたの肩書(ex.Engineer)</h3>
+                        <h3 className="title-text">何事もポジティブに取り組む</h3>
                         <ul className="social-icons">
                             <li className="icon-link">
                                 {/* TODO */}
