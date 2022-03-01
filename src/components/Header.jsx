@@ -20,13 +20,13 @@ export const Header = () => {
                         <ul className="social-icons">
                             <li className="icon-link">
                                 {/* リンク先(href)は任意のURLを設定してください */}
-                                <a href="https://twitter.com/">
+                                <a href="https://twitter.com/takato_wants_">
                                     <FaTwitter color="white" size="2rem" />
                                 </a>
                             </li>
                             <li className="icon-link">
                                 {/* リンク先(href)は任意のURLを設定してください */}
-                                <a href="https://github.com/">
+                                <a href="https://github.com/0122takato">
                                     <FaGithub color="white" size="2rem" />
                                 </a>
                             </li>
