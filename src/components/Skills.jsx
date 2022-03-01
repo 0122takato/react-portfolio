@@ -1,9 +1,9 @@
 import { useEffect } from "react";
+import axios from 'axios';
 
 export const Skills = () => {
-    const outputTest = () => {console.log('test')};
-
-    useEffect(outputTest);
+    
+    useEffect(() => {axios.get('URL')}, []);
     
     return (
         <div id="skills">
