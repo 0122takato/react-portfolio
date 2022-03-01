@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const Skills = () => {
     
-    useEffect(() => {axios.get('URL')}, []);
+    useEffect(() => {axios.get('https://api.github.com/users/0122takato/repos').then((response) => console.log(response)) }, []);
     
     return (
         <div id="skills">
